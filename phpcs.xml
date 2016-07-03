@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
-<ruleset name="Custom Standard">
+<ruleset name="PHPCodeSniffer">
+    <description>A custom coding standard.</description>
 
-	<description>A custom coding standard</description>
+    <!-- 改行コードチェック -->
+    <rule ref="Generic.Files.LineEndings" />
 
-	<rule ref="Generic.Files.LineLength.MaxExceeded">
-		<message>Line contains %s chars, which is longer than the max limit of %s</message>
-	</rule>
-	
-	<rule ref="Generic.Files.LineLength.TooLong">
-		<message>Line longer than %s characters; contains %s characters</message>
-	</rule>
- 
+    <!-- BOMチェック -->
+    <rule ref="Generic.Files.ByteOrderMark" />
+
+    <!-- TABインデントチェック -->
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
+
+    <!-- 行末スペースチェック -->
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace" />
 </ruleset>
